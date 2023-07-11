@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E7E4F082A59451C00FB3DF7 /* CatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7E4F072A59451C00FB3DF7 /* CatalogApp.swift */; };
+		3E7E4F082A59451C00FB3DF7 /* SwiftUICatalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7E4F072A59451C00FB3DF7 /* SwiftUICatalogApp.swift */; };
 		3E7E4F0A2A59451C00FB3DF7 /* StaticTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7E4F092A59451C00FB3DF7 /* StaticTextView.swift */; };
 		3E7E4F0C2A59451D00FB3DF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E7E4F0B2A59451D00FB3DF7 /* Assets.xcassets */; };
 		3E7E4F0F2A59451D00FB3DF7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E7E4F0E2A59451D00FB3DF7 /* Preview Assets.xcassets */; };
@@ -37,14 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3E7E4F042A59451C00FB3DF7 /* Catalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E7E4F072A59451C00FB3DF7 /* CatalogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogApp.swift; sourceTree = "<group>"; };
+		3E7E4F042A59451C00FB3DF7 /* SwiftUICatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E7E4F072A59451C00FB3DF7 /* SwiftUICatalogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICatalogApp.swift; sourceTree = "<group>"; };
 		3E7E4F092A59451C00FB3DF7 /* StaticTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTextView.swift; sourceTree = "<group>"; };
 		3E7E4F0B2A59451D00FB3DF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E7E4F0E2A59451D00FB3DF7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3E7E4F142A59451D00FB3DF7 /* CatalogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatalogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E7E4F142A59451D00FB3DF7 /* SwiftUICatalogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUICatalogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E7E4F182A59451D00FB3DF7 /* CatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTests.swift; sourceTree = "<group>"; };
-		3E7E4F1E2A59451D00FB3DF7 /* CatalogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatalogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E7E4F1E2A59451D00FB3DF7 /* SwiftUICatalogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUICatalogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E7E4F222A59451D00FB3DF7 /* CatalogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogUITests.swift; sourceTree = "<group>"; };
 		3E7E4F242A59451D00FB3DF7 /* CatalogUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3E7E4F312A59454500FB3DF7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -90,9 +90,9 @@
 		3E7E4F052A59451C00FB3DF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3E7E4F042A59451C00FB3DF7 /* Catalog.app */,
-				3E7E4F142A59451D00FB3DF7 /* CatalogTests.xctest */,
-				3E7E4F1E2A59451D00FB3DF7 /* CatalogUITests.xctest */,
+				3E7E4F042A59451C00FB3DF7 /* SwiftUICatalog.app */,
+				3E7E4F142A59451D00FB3DF7 /* SwiftUICatalogTests.xctest */,
+				3E7E4F1E2A59451D00FB3DF7 /* SwiftUICatalogUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,7 +100,7 @@
 		3E7E4F062A59451C00FB3DF7 /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
-				3E7E4F072A59451C00FB3DF7 /* CatalogApp.swift */,
+				3E7E4F072A59451C00FB3DF7 /* SwiftUICatalogApp.swift */,
 				3E7E4F312A59454500FB3DF7 /* MainView.swift */,
 				3E7E4F0B2A59451D00FB3DF7 /* Assets.xcassets */,
 				3E7E4F0D2A59451D00FB3DF7 /* Preview Content */,
@@ -147,9 +147,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3E7E4F032A59451C00FB3DF7 /* Catalog */ = {
+		3E7E4F032A59451C00FB3DF7 /* SwiftUICatalog */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3E7E4F282A59451D00FB3DF7 /* Build configuration list for PBXNativeTarget "Catalog" */;
+			buildConfigurationList = 3E7E4F282A59451D00FB3DF7 /* Build configuration list for PBXNativeTarget "SwiftUICatalog" */;
 			buildPhases = (
 				3E7E4F002A59451C00FB3DF7 /* Sources */,
 				3E7E4F012A59451C00FB3DF7 /* Frameworks */,
@@ -159,14 +159,14 @@
 			);
 			dependencies = (
 			);
-			name = Catalog;
+			name = SwiftUICatalog;
 			productName = Catalog;
-			productReference = 3E7E4F042A59451C00FB3DF7 /* Catalog.app */;
+			productReference = 3E7E4F042A59451C00FB3DF7 /* SwiftUICatalog.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3E7E4F132A59451D00FB3DF7 /* CatalogTests */ = {
+		3E7E4F132A59451D00FB3DF7 /* SwiftUICatalogTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3E7E4F2B2A59451D00FB3DF7 /* Build configuration list for PBXNativeTarget "CatalogTests" */;
+			buildConfigurationList = 3E7E4F2B2A59451D00FB3DF7 /* Build configuration list for PBXNativeTarget "SwiftUICatalogTests" */;
 			buildPhases = (
 				3E7E4F102A59451D00FB3DF7 /* Sources */,
 				3E7E4F112A59451D00FB3DF7 /* Frameworks */,
@@ -177,14 +177,14 @@
 			dependencies = (
 				3E7E4F162A59451D00FB3DF7 /* PBXTargetDependency */,
 			);
-			name = CatalogTests;
+			name = SwiftUICatalogTests;
 			productName = CatalogTests;
-			productReference = 3E7E4F142A59451D00FB3DF7 /* CatalogTests.xctest */;
+			productReference = 3E7E4F142A59451D00FB3DF7 /* SwiftUICatalogTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3E7E4F1D2A59451D00FB3DF7 /* CatalogUITests */ = {
+		3E7E4F1D2A59451D00FB3DF7 /* SwiftUICatalogUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3E7E4F2E2A59451D00FB3DF7 /* Build configuration list for PBXNativeTarget "CatalogUITests" */;
+			buildConfigurationList = 3E7E4F2E2A59451D00FB3DF7 /* Build configuration list for PBXNativeTarget "SwiftUICatalogUITests" */;
 			buildPhases = (
 				3E7E4F1A2A59451D00FB3DF7 /* Sources */,
 				3E7E4F1B2A59451D00FB3DF7 /* Frameworks */,
@@ -195,9 +195,9 @@
 			dependencies = (
 				3E7E4F202A59451D00FB3DF7 /* PBXTargetDependency */,
 			);
-			name = CatalogUITests;
+			name = SwiftUICatalogUITests;
 			productName = CatalogUITests;
-			productReference = 3E7E4F1E2A59451D00FB3DF7 /* CatalogUITests.xctest */;
+			productReference = 3E7E4F1E2A59451D00FB3DF7 /* SwiftUICatalogUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -223,7 +223,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3E7E4EFF2A59451C00FB3DF7 /* Build configuration list for PBXProject "Catalog" */;
+			buildConfigurationList = 3E7E4EFF2A59451C00FB3DF7 /* Build configuration list for PBXProject "SwiftUICatalog" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -236,9 +236,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3E7E4F032A59451C00FB3DF7 /* Catalog */,
-				3E7E4F132A59451D00FB3DF7 /* CatalogTests */,
-				3E7E4F1D2A59451D00FB3DF7 /* CatalogUITests */,
+				3E7E4F032A59451C00FB3DF7 /* SwiftUICatalog */,
+				3E7E4F132A59451D00FB3DF7 /* SwiftUICatalogTests */,
+				3E7E4F1D2A59451D00FB3DF7 /* SwiftUICatalogUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -278,7 +278,7 @@
 				3E7E4F322A59454500FB3DF7 /* MainView.swift in Sources */,
 				3E7E4F342A594E6000FB3DF7 /* StaticText_Length.swift in Sources */,
 				3E7E4F362A594EAD00FB3DF7 /* StaticText_Style.swift in Sources */,
-				3E7E4F082A59451C00FB3DF7 /* CatalogApp.swift in Sources */,
+				3E7E4F082A59451C00FB3DF7 /* SwiftUICatalogApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,12 +304,12 @@
 /* Begin PBXTargetDependency section */
 		3E7E4F162A59451D00FB3DF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3E7E4F032A59451C00FB3DF7 /* Catalog */;
+			target = 3E7E4F032A59451C00FB3DF7 /* SwiftUICatalog */;
 			targetProxy = 3E7E4F152A59451D00FB3DF7 /* PBXContainerItemProxy */;
 		};
 		3E7E4F202A59451D00FB3DF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3E7E4F032A59451C00FB3DF7 /* Catalog */;
+			target = 3E7E4F032A59451C00FB3DF7 /* SwiftUICatalog */;
 			targetProxy = 3E7E4F1F2A59451D00FB3DF7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -503,7 +503,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Catalog.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Catalog";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUICatalog.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftUICatalog";
 			};
 			name = Debug;
 		};
@@ -523,7 +523,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Catalog.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Catalog";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUICatalog.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftUICatalog";
 			};
 			name = Release;
 		};
@@ -566,7 +566,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3E7E4EFF2A59451C00FB3DF7 /* Build configuration list for PBXProject "Catalog" */ = {
+		3E7E4EFF2A59451C00FB3DF7 /* Build configuration list for PBXProject "SwiftUICatalog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3E7E4F262A59451D00FB3DF7 /* Debug */,
@@ -575,7 +575,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3E7E4F282A59451D00FB3DF7 /* Build configuration list for PBXNativeTarget "Catalog" */ = {
+		3E7E4F282A59451D00FB3DF7 /* Build configuration list for PBXNativeTarget "SwiftUICatalog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3E7E4F292A59451D00FB3DF7 /* Debug */,
@@ -584,7 +584,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3E7E4F2B2A59451D00FB3DF7 /* Build configuration list for PBXNativeTarget "CatalogTests" */ = {
+		3E7E4F2B2A59451D00FB3DF7 /* Build configuration list for PBXNativeTarget "SwiftUICatalogTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3E7E4F2C2A59451D00FB3DF7 /* Debug */,
@@ -593,7 +593,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3E7E4F2E2A59451D00FB3DF7 /* Build configuration list for PBXNativeTarget "CatalogUITests" */ = {
+		3E7E4F2E2A59451D00FB3DF7 /* Build configuration list for PBXNativeTarget "SwiftUICatalogUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3E7E4F2F2A59451D00FB3DF7 /* Debug */,

@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct CatalogApp: App {
+struct SwiftUICatalogApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()
