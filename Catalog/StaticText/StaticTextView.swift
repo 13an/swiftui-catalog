@@ -18,6 +18,14 @@ struct StaticTextView: View {
                 Section("Style") {
                     StaticText_Style()
                 }
+                
+                Section("AttributedString") {
+                    StaticText_AtributedString()
+                }
+                
+                Section("TextAlignment") {
+                    StaticText_TextAlignment()
+                }
             }
             .navigationTitle("Text")
         }

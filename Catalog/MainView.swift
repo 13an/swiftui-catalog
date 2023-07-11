@@ -12,19 +12,19 @@ struct MainView: View {
         TabView {
             StaticTextView()
                 .tabItem {
-                    Label("Text", systemImage: "list.dash")
+                    Label("Text", systemImage: "textformat")
                 }
-            StaticTextView()
+            ImageView()
                 .tabItem {
-                    Label("Static Text", systemImage: "list.dash")
+                    Label("Image", systemImage: "photo")
                 }
-            StaticTextView()
+            VideoView()
                 .tabItem {
-                    Label("Static Text", systemImage: "list.dash")
+                    Label("Video", systemImage: "video")
                 }
-            StaticTextView()
+            HapticFeedbackView()
                 .tabItem {
-                    Label("Static Text", systemImage: "list.dash")
+                    Label("Haptic", systemImage: "burst")
                 }
             StaticTextView()
                 .tabItem {
