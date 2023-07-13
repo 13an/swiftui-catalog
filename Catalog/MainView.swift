@@ -36,9 +36,9 @@ struct MainView: View {
                     Label("Haptics", systemImage: "burst")
                 }
                 .tag(3) // タグを指定
-            StaticTextView()
+            SpriteBoxView()
                 .tabItem {
-                    Label("Static Text", systemImage: "list.dash")
+                    Label("Sprite", systemImage: "rectangle.3.offgrid.fill")
                 }
                 .tag(4) // タグを指定
         }
