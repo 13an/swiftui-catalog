@@ -69,6 +69,26 @@ class HapticEngine: ObservableObject, Equatable {
         }
     }
     
+    func hapticFeedback4Beats() {
+        guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
+
+        var events = [CHHapticEvent]()
+        
+        for i in stride(from: 0, through: 80, by: 1.665) {
+            let intensity = CHHapticEventParameter(parameterID: .hapticIntensity, value: 1)
+            let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: 1)
+            let event = CHHapticEvent(eventType: .hapticTransient, parameters: [intensity, sharpness], relativeTime: i)
+            events.append(event)
+        }
+        
+        do {
+            let pattern = try CHHapticPattern(events: events, parameters: [])
+            let player = try engine?.makePlayer(with: pattern)
+            try player?.start(atTime: 0)
+        } catch {
+            print("Failed to play pattern \(error.localizedDescription)")
+        }
+    }
 
     func complexSuccess() {
         guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }

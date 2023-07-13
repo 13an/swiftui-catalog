@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E279ADE2A601EFC0050E32E /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3E279ADD2A601EFC0050E32E /* song.mp3 */; };
+		3E279AE02A601FDF0050E32E /* HapticsView_Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E279ADF2A601FDF0050E32E /* HapticsView_Music.swift */; };
 		3E709EC92A5D112E004A9BC4 /* StaticText_AtributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E709EC82A5D112E004A9BC4 /* StaticText_AtributedString.swift */; };
 		3E709ECB2A5D2415004A9BC4 /* StaticText_TextAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E709ECA2A5D2415004A9BC4 /* StaticText_TextAlignment.swift */; };
 		3E709ECE2A5D2D66004A9BC4 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E709ECD2A5D2D66004A9BC4 /* ImageView.swift */; };
@@ -16,7 +18,7 @@
 		3E709ED62A5D3A0C004A9BC4 /* Image_Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E709ED52A5D3A0C004A9BC4 /* Image_Shape.swift */; };
 		3E709ED82A5D4202004A9BC4 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E709ED72A5D4202004A9BC4 /* VideoView.swift */; };
 		3E709EDD2A5D4593004A9BC4 /* ikigai.mov in Resources */ = {isa = PBXBuildFile; fileRef = 3E709EDC2A5D4593004A9BC4 /* ikigai.mov */; };
-		3E709EDF2A5D4EDF004A9BC4 /* HapticFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E709EDE2A5D4EDF004A9BC4 /* HapticFeedbackView.swift */; };
+		3E709EDF2A5D4EDF004A9BC4 /* HapticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E709EDE2A5D4EDF004A9BC4 /* HapticsView.swift */; };
 		3E75FFE32A5FCDC60023E4D7 /* HapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75FFE22A5FCDC60023E4D7 /* HapticEngine.swift */; };
 		3E75FFE52A5FE50D0023E4D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75FFE42A5FE50C0023E4D7 /* AppDelegate.swift */; };
 		3E75FFE82A5FE5310023E4D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E75FFE72A5FE5310023E4D7 /* SceneDelegate.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E279ADD2A601EFC0050E32E /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
+		3E279ADF2A601FDF0050E32E /* HapticsView_Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsView_Music.swift; sourceTree = "<group>"; };
 		3E709EC82A5D112E004A9BC4 /* StaticText_AtributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticText_AtributedString.swift; sourceTree = "<group>"; };
 		3E709ECA2A5D2415004A9BC4 /* StaticText_TextAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticText_TextAlignment.swift; sourceTree = "<group>"; };
 		3E709ECD2A5D2D66004A9BC4 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
@@ -59,7 +63,7 @@
 		3E709ED52A5D3A0C004A9BC4 /* Image_Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image_Shape.swift; sourceTree = "<group>"; };
 		3E709ED72A5D4202004A9BC4 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		3E709EDC2A5D4593004A9BC4 /* ikigai.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ikigai.mov; sourceTree = "<group>"; };
-		3E709EDE2A5D4EDF004A9BC4 /* HapticFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedbackView.swift; sourceTree = "<group>"; };
+		3E709EDE2A5D4EDF004A9BC4 /* HapticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsView.swift; sourceTree = "<group>"; };
 		3E75FFE22A5FCDC60023E4D7 /* HapticEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticEngine.swift; sourceTree = "<group>"; };
 		3E75FFE42A5FE50C0023E4D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E75FFE72A5FE5310023E4D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,8 +130,9 @@
 		3E709EE02A5D4EE4004A9BC4 /* HapticFeedback */ = {
 			isa = PBXGroup;
 			children = (
-				3E709EDE2A5D4EDF004A9BC4 /* HapticFeedbackView.swift */,
+				3E709EDE2A5D4EDF004A9BC4 /* HapticsView.swift */,
 				3E75FFE22A5FCDC60023E4D7 /* HapticEngine.swift */,
+				3E279ADF2A601FDF0050E32E /* HapticsView_Music.swift */,
 			);
 			path = HapticFeedback;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 				3E7E4F072A59451C00FB3DF7 /* SwiftUICatalogApp.swift */,
 				3E7E4F312A59454500FB3DF7 /* MainView.swift */,
 				3E7E4F0B2A59451D00FB3DF7 /* Assets.xcassets */,
+				3E279ADD2A601EFC0050E32E /* song.mp3 */,
 				3E709EDC2A5D4593004A9BC4 /* ikigai.mov */,
 				3E7E4F372A594FBC00FB3DF7 /* StaticText */,
 				3E709ECC2A5D2D33004A9BC4 /* Image */,
@@ -312,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E7E4F0F2A59451D00FB3DF7 /* Preview Assets.xcassets in Resources */,
+				3E279ADE2A601EFC0050E32E /* song.mp3 in Resources */,
 				3E709EDD2A5D4593004A9BC4 /* ikigai.mov in Resources */,
 				3E7E4F0C2A59451D00FB3DF7 /* Assets.xcassets in Resources */,
 			);
@@ -341,7 +348,8 @@
 				3E709ED02A5D3010004A9BC4 /* Image_Resize.swift in Sources */,
 				3E75FFE32A5FCDC60023E4D7 /* HapticEngine.swift in Sources */,
 				3E709ECE2A5D2D66004A9BC4 /* ImageView.swift in Sources */,
-				3E709EDF2A5D4EDF004A9BC4 /* HapticFeedbackView.swift in Sources */,
+				3E279AE02A601FDF0050E32E /* HapticsView_Music.swift in Sources */,
+				3E709EDF2A5D4EDF004A9BC4 /* HapticsView.swift in Sources */,
 				3E7E4F0A2A59451C00FB3DF7 /* StaticTextView.swift in Sources */,
 				3E709ED42A5D3618004A9BC4 /* Image_SFSymbols.swift in Sources */,
 				3E7E4F322A59454500FB3DF7 /* MainView.swift in Sources */,

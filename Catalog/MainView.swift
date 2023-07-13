@@ -31,7 +31,7 @@ struct MainView: View {
                     Label("Video", systemImage: "video")
                 }
                 .tag(2) // タグを指定
-            HapticFeedbackView()
+            HapticsView()
                 .tabItem {
                     Label("Haptics", systemImage: "burst")
                 }
