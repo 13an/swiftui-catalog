@@ -12,9 +12,15 @@ struct HapticFeedbackView: View {
     @StateObject private var hapticEngine = HapticEngine()
     
     var body: some View {
-        Text("Tap and Feel!")
-            .onAppear(perform: hapticEngine.prepareHaptics)
-            .onTapGesture(perform: hapticEngine.complexSuccess)
+        HStack {
+            Text("hapticFeedbackLight")
+                .onAppear(perform: hapticEngine.prepareHaptics)
+                .onTapGesture(perform: hapticEngine.hapticFeedbackLight)
+            
+            Text("hapticFeedbackLightDouble")
+                .onAppear(perform: hapticEngine.prepareHaptics)
+                .onTapGesture(perform: hapticEngine.hapticFeedbackLightDouble)
+        }
     }
 }
 

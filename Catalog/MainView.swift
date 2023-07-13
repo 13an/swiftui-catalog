@@ -31,9 +31,9 @@ struct MainView: View {
                     Label("Video", systemImage: "video")
                 }
                 .tag(2) // タグを指定
-            StaticTextView()
+            HapticFeedbackView()
                 .tabItem {
-                    Label("Static Text", systemImage: "list.dash")
+                    Label("Haptics", systemImage: "burst")
                 }
                 .tag(3) // タグを指定
             StaticTextView()
@@ -46,7 +46,7 @@ struct MainView: View {
             hapticEngine.prepareHaptics()
         }
         .onChange(of: selectedTab) { tab in
-            hapticEngine.complexSuccess()
+            hapticEngine.hapticFeedbackLightDouble()
         }
         .environmentObject(hapticEngine)
     }
