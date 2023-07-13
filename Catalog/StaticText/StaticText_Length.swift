@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct StaticText_Length: View {
+    @StateObject private var hapticEngine = HapticEngine()
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
             Text("Hello, world!")
+                .onAppear(perform: hapticEngine.prepareHaptics)
+                .onTapGesture(perform: hapticEngine.complexSuccess)
             
             Text("sooooooooooooooooooooooooooooooooooooooooooooooooooooooooo long text")
             

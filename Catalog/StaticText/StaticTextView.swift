@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StaticTextView: View {
+struct StaticTextView: View {    
     var body: some View {
         NavigationView {
             List {
