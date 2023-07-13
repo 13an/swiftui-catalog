@@ -8,7 +8,7 @@
 import SwiftUI
 import SpriteKit
 
-class GameScene: SKScene {
+class SpriteBoxScene: SKScene {
     override func didMove(to view: SKView) {
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
     }
@@ -27,7 +27,7 @@ class GameScene: SKScene {
 // at 300x400 points
 struct SpriteBoxView: View {
     var scene: SKScene {
-        let scene = GameScene()
+        let scene = SpriteBoxScene()
         scene.size = CGSize(width: 300, height: 400)
         scene.scaleMode = .fill
         return scene

@@ -10,6 +10,7 @@
 		3E279ADE2A601EFC0050E32E /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3E279ADD2A601EFC0050E32E /* song.mp3 */; };
 		3E279AE02A601FDF0050E32E /* HapticsView_Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E279ADF2A601FDF0050E32E /* HapticsView_Music.swift */; };
 		3E279AE22A602D110050E32E /* SpriteBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E279AE12A602D110050E32E /* SpriteBoxView.swift */; };
+		3E279AE42A6032DB0050E32E /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E279AE32A6032DB0050E32E /* GameView.swift */; };
 		3E709EC92A5D112E004A9BC4 /* StaticText_AtributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E709EC82A5D112E004A9BC4 /* StaticText_AtributedString.swift */; };
 		3E709ECB2A5D2415004A9BC4 /* StaticText_TextAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E709ECA2A5D2415004A9BC4 /* StaticText_TextAlignment.swift */; };
 		3E709ECE2A5D2D66004A9BC4 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E709ECD2A5D2D66004A9BC4 /* ImageView.swift */; };
@@ -54,6 +55,7 @@
 		3E279ADD2A601EFC0050E32E /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
 		3E279ADF2A601FDF0050E32E /* HapticsView_Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsView_Music.swift; sourceTree = "<group>"; };
 		3E279AE12A602D110050E32E /* SpriteBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteBoxView.swift; sourceTree = "<group>"; };
+		3E279AE32A6032DB0050E32E /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		3E709EC82A5D112E004A9BC4 /* StaticText_AtributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticText_AtributedString.swift; sourceTree = "<group>"; };
 		3E709ECA2A5D2415004A9BC4 /* StaticText_TextAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticText_TextAlignment.swift; sourceTree = "<group>"; };
 		3E709ECD2A5D2D66004A9BC4 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				3E709EE02A5D4EE4004A9BC4 /* HapticFeedback */,
 				3E7E4F0D2A59451D00FB3DF7 /* Preview Content */,
 				3E279AE12A602D110050E32E /* SpriteBoxView.swift */,
+				3E279AE32A6032DB0050E32E /* GameView.swift */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				3E75FFE32A5FCDC60023E4D7 /* HapticEngine.swift in Sources */,
 				3E709ECE2A5D2D66004A9BC4 /* ImageView.swift in Sources */,
 				3E279AE02A601FDF0050E32E /* HapticsView_Music.swift in Sources */,
+				3E279AE42A6032DB0050E32E /* GameView.swift in Sources */,
 				3E709EDF2A5D4EDF004A9BC4 /* HapticsView.swift in Sources */,
 				3E7E4F0A2A59451C00FB3DF7 /* StaticTextView.swift in Sources */,
 				3E709ED42A5D3618004A9BC4 /* Image_SFSymbols.swift in Sources */,

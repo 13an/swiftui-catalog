@@ -38,9 +38,14 @@ struct MainView: View {
                 .tag(3) // タグを指定
             SpriteBoxView()
                 .tabItem {
-                    Label("Sprite", systemImage: "rectangle.3.offgrid.fill")
+                    Label("Sprite", systemImage: "cube.fill")
                 }
                 .tag(4) // タグを指定
+            GameView()
+                .tabItem {
+                    Label("Game", systemImage: "gamecontroller.fill")
+                }
+                .tag(5) // タグを指定
         }
         .onAppear {
             hapticEngine.prepareHaptics()
