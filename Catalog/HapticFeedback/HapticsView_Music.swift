@@ -19,9 +19,15 @@ struct HapticsView_Music: View {
         }
         .onAppear {
             if let songURL = Bundle.main.url(forResource: "song", withExtension: "mp3") {
-                audioPlayer = try? AVAudioPlayer(contentsOf: songURL)
-                audioPlayer?.prepareToPlay()
-                hapticEngine.prepareHaptics()
+                do {
+                    let audioSession = AVAudioSession.sharedInstance()
+                    try audioSession.setCategory(.playback)
+                    audioPlayer = try AVAudioPlayer(contentsOf: songURL)
+                    audioPlayer?.prepareToPlay()
+                    hapticEngine.prepareHaptics()
+                } catch {
+                    print("Failed to initialize audio player: \(error)")
+                }
             }
         }
     }
