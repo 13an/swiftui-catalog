@@ -32,7 +32,7 @@ struct GeneralCatalogView: View {
                 .onChange(of: selectedSegment) { segment in
                     hapticEngine.hapticFeedbackLightDouble()
                 }
-                .environmentObject(hapticEngine)                
+                .environmentObject(hapticEngine)
             }
             .padding(24)
         }

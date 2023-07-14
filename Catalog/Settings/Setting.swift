@@ -8,27 +8,38 @@
 import SwiftUI
 
 struct Setting: View {
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
-        NavigationStack {
-            List {
-                NavigationLink("Name") {
-                    Setting_Name()
+        VStack {
+            NavigationView {
+                List {
+                    NavigationLink("Name") {
+                        Setting_Name()
+                    }
+                    NavigationLink("Username") {
+                        Setting_Name()
+                    }
+                    NavigationLink("Birthday") {
+                        Setting_Name()
+                    }
+                    NavigationLink("Joined At") {
+                        Setting_Name()
+                    }
+                    NavigationLink("Bio") {
+                        Setting_Name()
+                    }
                 }
-                NavigationLink("Username") {
-                    Setting_Name()
-                }
-                NavigationLink("Birthday") {
-                    Setting_Name()
-                }
-                NavigationLink("Joined At") {
-                    Setting_Name()
-                }
-                NavigationLink("Bio") {
-                    Setting_Name()
-                }
+                .navigationTitle("Setting")
             }
-            .navigationTitle("Setting")
+            Button("Close") {
+                dismiss()
+            }
+            .font(.title)
+            .buttonStyle(.bordered)
         }
+        .background(Color.black.opacity(0.0))
+        .interactiveDismissDisabled()
     }
 }
 
