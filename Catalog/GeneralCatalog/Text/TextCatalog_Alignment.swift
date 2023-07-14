@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StaticText_TextAlignment: View {
+struct TextCatalog_Alignment: View {
     let alignments: [TextAlignment] = [.leading, .center, .trailing]
     @State private var alignment = TextAlignment.leading
     
@@ -28,8 +28,8 @@ struct StaticText_TextAlignment: View {
     }
 }
 
-struct StaticText_TextAlignment_Previews: PreviewProvider {
+struct TextCatalog_Alignment_Previews: PreviewProvider {
     static var previews: some View {
-        StaticText_TextAlignment()
+        TextCatalog_Alignment()
     }
 }

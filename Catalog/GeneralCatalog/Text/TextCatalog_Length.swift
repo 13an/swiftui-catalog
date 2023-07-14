@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StaticText_Length: View {
+struct TextCatalog_Length: View {
     @StateObject private var hapticEngine = HapticEngine()
     
     var body: some View {
@@ -44,6 +44,6 @@ struct StaticText_Length: View {
 
 struct TextLengthSection_Previews: PreviewProvider {
     static var previews: some View {
-        StaticText_Length()
+        TextCatalog_Length()
     }
 }

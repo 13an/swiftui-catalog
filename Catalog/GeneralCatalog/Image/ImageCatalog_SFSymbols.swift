@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Image_SFSymbols: View {
+struct ImageCatalog_SFSymbols: View {
     var body: some View {
         VStack {
             HStack {
@@ -85,8 +85,8 @@ struct Image_SFSymbols: View {
     }
 }
 
-struct Image_SFSymbols_Previews: PreviewProvider {
+struct ImageCatalog_SFSymbols_Previews: PreviewProvider {
     static var previews: some View {
-        Image_SFSymbols()
+        ImageCatalog_SFSymbols()
     }
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StaticText_AtributedString: View {
+struct TextCatalog_AtributedString: View {
     var redText: AttributedString {
         var result = AttributedString("Red")
         result.font = .largeTitle
@@ -81,8 +81,8 @@ struct StaticText_AtributedString: View {
     }
 }
 
-struct StaticText_AtributedString_Previews: PreviewProvider {
+struct TextCatalog_AtributedString_Previews: PreviewProvider {
     static var previews: some View {
-        StaticText_AtributedString()
+        TextCatalog_AtributedString()
     }
 }

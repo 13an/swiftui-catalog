@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Image_Tile: View {
+struct ImageCatalog_Tile: View {
     var body: some View {
         VStack {
             Image(systemName: "sunset")
@@ -27,8 +27,8 @@ struct Image_Tile: View {
     }
 }
 
-struct Image_Tile_Previews: PreviewProvider {
+struct ImageCatalog_Tile_Previews: PreviewProvider {
     static var previews: some View {
-        Image_Tile()
+        ImageCatalog_Tile()
     }
 }

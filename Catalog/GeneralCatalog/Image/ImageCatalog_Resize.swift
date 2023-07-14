@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Image_Resize: View {
+struct ImageCatalog_Resize: View {
     var body: some View {
         VStack (alignment: .leading) {
             VStack(alignment: .trailing) {
@@ -60,8 +60,8 @@ struct Image_Resize: View {
     }
 }
 
-struct Image_Resize_Previews: PreviewProvider {
+struct ImageCatalog_Resize_Previews: PreviewProvider {
     static var previews: some View {
-        Image_Resize()
+        ImageCatalog_Resize()
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreHaptics
 
 struct MainView: View {
     @EnvironmentObject private var hapticEngine: HapticEngine // 共有の HapticEngine インスタンスを参照する
@@ -16,17 +17,17 @@ struct MainView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            StaticTextView()
+            GeneralCatalogView()
                 .tabItem {
                     Label("Text", systemImage: "textformat")
                 }
                 .tag(0) // タグを指定
-            ImageView()
+            ImageCatalog()
                 .tabItem {
                     Label("Image", systemImage: "photo")
                 }
                 .tag(1) // タグを指定
-            VideoView()
+            VideoCatalog()
                 .tabItem {
                     Label("Video", systemImage: "video")
                 }
@@ -46,6 +47,10 @@ struct MainView: View {
                     Label("Game", systemImage: "gamecontroller.fill")
                 }
                 .tag(5) // タグを指定
+            NavigationSandboxView()
+                .tabItem {
+                    Label("Navigation", systemImage: "chevron.right.square.fill")
+                }
         }
         .onAppear {
             hapticEngine.prepareHaptics()

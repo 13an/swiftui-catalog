@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StaticText_Style: View {
+struct TextCatalog_Style: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
             Text(".font(.largeTitle)")
@@ -56,8 +56,8 @@ struct StaticText_Style: View {
     }
 }
 
-struct TextStyleSection_Previews: PreviewProvider {
+struct TextCatalog_Style_Previews: PreviewProvider {
     static var previews: some View {
-        StaticText_Style()
+        TextCatalog_Style()
     }
 }

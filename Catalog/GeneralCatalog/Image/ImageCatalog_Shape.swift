@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Image_Shape: View {
+struct ImageCatalog_Shape: View {
     var body: some View {
         VStack {
             HStack {
@@ -63,8 +63,8 @@ struct Image_Shape: View {
     }
 }
 
-struct Image_Shape_Previews: PreviewProvider {
+struct ImageCatalog_Shape_Previews: PreviewProvider {
     static var previews: some View {
-        Image_Shape()
+        ImageCatalog_Shape()
     }
 }

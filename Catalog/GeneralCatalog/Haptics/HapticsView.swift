@@ -10,6 +10,8 @@ import CoreHaptics
 import AVKit
 
 struct HapticsView: View {
+    @State private var showingSetting = false
+
     @StateObject private var hapticEngine = HapticEngine()
     @State var audioPlayer: AVAudioPlayer!
     
@@ -37,6 +39,16 @@ struct HapticsView: View {
                 }
             }
             .navigationTitle("Haptics")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Setting") {
+                        showingSetting.toggle()
+                    }
+                    .sheet(isPresented: $showingSetting) {
+                        Setting()
+                    }
+                }
+            }
         }
     }
 }
