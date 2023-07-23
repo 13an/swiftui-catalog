@@ -8,54 +8,80 @@
 import SwiftUI
 import CoreHaptics
 
-struct MainView: View {
+struct MainTabView: View {
     @EnvironmentObject private var hapticEngine: HapticEngine // 共有の HapticEngine インスタンスを参照する
-    //    @StateObject private var hapticEngine = HapticEngine()
-
     @State private var selectedTab: Int = 0 // タブの選択状態を保持する
-    
-    
+    @State var selectedIndex: Int = 0
+        
     var body: some View {
-        TabView(selection: $selectedTab) {
-            MainTabView()
-                .tabItem {
-                    Label("Text", systemImage: "textformat")
-                }
-                .tag(0) // タグを指定
-//            GeneralCatalogView()
-//                .tabItem {
-//                    Label("Text", systemImage: "textformat")
-//                }
-//                .tag(0) // タグを指定
+        CustomTabView(tabs: TabType.allCases.map({ $0.tabItem }), selectedIndex: $selectedIndex) { index in
+            let type = TabType(rawValue: index) ?? .generalCatalog
+            getTabView(type: type)
+        }
+    }
+    
+    @ViewBuilder
+    func getTabView(type: TabType) -> some View {
+        switch type {
+        case .generalCatalog:
+            GeneralCatalogView()
+        case .spriteBox:
             SpriteBoxView()
-                .tabItem {
-                    Label("Sprite", systemImage: "cube.fill")
-                }
-                .tag(1) // タグを指定
+        case .game:
             GameView()
-                .tabItem {
-                    Label("Game", systemImage: "gamecontroller.fill")
-                }
-                .tag(2) // タグを指定
+        case .navigationSandbox:
             NavigationSandboxView()
-                .tabItem {
-                    Label("Navigation", systemImage: "chevron.right.square.fill")
-                }
-                .tag(3)
         }
-        .onAppear {
-            hapticEngine.prepareHaptics()
-        }
-        .onChange(of: selectedTab) { tab in
-            hapticEngine.hapticFeedbackLightDouble()
-        }
-        .environmentObject(hapticEngine)
     }
 }
 
-struct MainView_Previews: PreviewProvider {
+enum TabType: Int, CaseIterable {
+    case generalCatalog = 0
+    case spriteBox
+    case game
+    case navigationSandbox
+    
+    var tabItem: TabItemData {
+        switch self {
+        case .generalCatalog:
+            return TabItemData(image: "globe-america-outlined", selectedImage: "globe-america-filled", title: "General")
+        case .spriteBox:
+            return TabItemData(image: "message-outlined", selectedImage: "message-filled", title: "Spritebox")
+        case .game:
+            return TabItemData(image: "person-outlined", selectedImage: "person-filled", title: "Game")
+        case .navigationSandbox:
+            return TabItemData(image: "person-filled", selectedImage: "person-filled", title: "Navigation")
+        }
+    }
+}
+
+struct CustomTabView<Content: View>: View {
+    let tabs: [TabItemData]
+    @Binding var selectedIndex: Int
+    @ViewBuilder let content: (Int) -> Content
+    
+    var body: some View {
+        ZStack {
+            TabView(selection: $selectedIndex) {
+                ForEach(tabs.indices) { index in
+                    content(index)
+                        .tag(index)
+                }
+            }
+            
+            VStack {
+                Spacer()
+                TabBottomView(tabbarItems: tabs, selectedIndex: $selectedIndex)
+            }
+            .padding(.bottom, 8)
+        }
+        .ignoresSafeArea(edges: .bottom)
+    }
+}
+
+struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainTabView()
             .environmentObject(HapticEngine())
     }
 }

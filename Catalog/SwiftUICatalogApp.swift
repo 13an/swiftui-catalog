@@ -26,7 +26,7 @@ struct MyNameApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainTabView()
                 .environmentObject(hapticEngine)
                 .onAppear {
                     appDelegate.hapticEngine = hapticEngine
