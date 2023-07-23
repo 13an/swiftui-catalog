@@ -19,11 +19,23 @@ struct HapticsView: View {
         NavigationView {
             List {
                 Section("Light") {
-                    Button("Light Haptic Feedback") {
+                    Button("onTapGesture Light Haptic Feedback") {
                         
                     }
                     .onAppear(perform: hapticEngine.prepareHaptics)
                     .onTapGesture(perform: hapticEngine.hapticFeedbackLight)
+                }
+                
+                Section("Light") {
+                    Button("onLongPressGesture Light Haptic Feedback") {
+                        
+                    }
+                    .onAppear(perform: hapticEngine.prepareHaptics)
+                    .onLongPressGesture(minimumDuration: 0.8, maximumDistance: .infinity, pressing: { pressing in
+                            if pressing {
+                                hapticEngine.hapticFeedbackLight()
+                            }
+                        }, perform: {})
                 }
                 
                 Section("Light Double") {
