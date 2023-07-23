@@ -45,7 +45,7 @@ struct HapticsView: View {
                         showingSetting.toggle()
                     }
                     .sheet(isPresented: $showingSetting) {
-                        Setting()
+                        SettingView()
                     }
                 }
             }

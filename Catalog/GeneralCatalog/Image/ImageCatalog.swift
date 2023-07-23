@@ -36,7 +36,7 @@ struct ImageCatalog: View {
                         showingSetting.toggle()
                     }
                     .sheet(isPresented: $showingSetting) {
-                        Setting()
+                        SettingView()
                     }
                 }
             }

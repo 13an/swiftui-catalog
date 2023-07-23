@@ -21,7 +21,7 @@ struct VideoCatalog: View {
                         showingSetting.toggle()
                     }
                     .sheet(isPresented: $showingSetting) {
-                        Setting()
+                        SettingView()
                     }
                 }
             }

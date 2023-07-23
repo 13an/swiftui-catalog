@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Setting: View {
+struct SettingView: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -43,8 +43,8 @@ struct Setting: View {
     }
 }
 
-struct Setting_Previews: PreviewProvider {
+struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
-        Setting()
+        SettingView()
     }
 }

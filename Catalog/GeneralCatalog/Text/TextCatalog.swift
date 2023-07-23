@@ -38,7 +38,7 @@ struct TextCatalog: View {
                         showingSetting.toggle()
                     }
                     .sheet(isPresented: $showingSetting) {
-                        Setting()
+                        SettingView()
                             .presentationDetents(Set(heights))
                             .presentationDragIndicator(.hidden)
                     }

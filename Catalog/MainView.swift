@@ -17,40 +17,31 @@ struct MainView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            GeneralCatalogView()
+            MainTabView()
                 .tabItem {
                     Label("Text", systemImage: "textformat")
                 }
                 .tag(0) // タグを指定
-            ImageCatalog()
-                .tabItem {
-                    Label("Image", systemImage: "photo")
-                }
-                .tag(1) // タグを指定
-            VideoCatalog()
-                .tabItem {
-                    Label("Video", systemImage: "video")
-                }
-                .tag(2) // タグを指定
-            HapticsView()
-                .tabItem {
-                    Label("Haptics", systemImage: "burst")
-                }
-                .tag(3) // タグを指定
+//            GeneralCatalogView()
+//                .tabItem {
+//                    Label("Text", systemImage: "textformat")
+//                }
+//                .tag(0) // タグを指定
             SpriteBoxView()
                 .tabItem {
                     Label("Sprite", systemImage: "cube.fill")
                 }
-                .tag(4) // タグを指定
+                .tag(1) // タグを指定
             GameView()
                 .tabItem {
                     Label("Game", systemImage: "gamecontroller.fill")
                 }
-                .tag(5) // タグを指定
+                .tag(2) // タグを指定
             NavigationSandboxView()
                 .tabItem {
                     Label("Navigation", systemImage: "chevron.right.square.fill")
                 }
+                .tag(3)
         }
         .onAppear {
             hapticEngine.prepareHaptics()
@@ -65,5 +56,6 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+            .environmentObject(HapticEngine())
     }
 }
