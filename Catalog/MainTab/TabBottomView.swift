@@ -10,7 +10,8 @@ import SwiftUI
 struct TabBottomView: View {
     @Environment(\.safeAreaInsets) private var safeAreaInsets
 
-    
+    @StateObject private var hapticEngine = HapticEngine()
+
     let tabbarItems: [TabItemData]
     var height: CGFloat = 48
     var width: CGFloat = UIScreen.main.bounds.width
@@ -29,7 +30,14 @@ struct TabBottomView: View {
                     } label: {
                         let isSelected = selectedIndex == index
                         TabItemView(data: item, isSelected: isSelected)
+                            
                     }
+                    .onAppear(perform: hapticEngine.prepareHaptics)
+                    .onLongPressGesture(minimumDuration: 0.1, maximumDistance: .infinity, pressing: { pressing in
+                            if pressing {
+                                hapticEngine.hapticFeedbackLight()
+                            }
+                        }, perform: {})
                     Spacer()
                 }
             }
