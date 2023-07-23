@@ -60,17 +60,20 @@ struct TabItemView: View {
     let isSelected: Bool
     
     var body: some View {
-        VStack {
-            Image(isSelected ? data.selectedImage : data.image)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 24, height: 24)
-            
-            Spacer().frame(height: 4)
-            
-//            Text(data.title)
-//                .foregroundColor(isSelected ? .black : .gray)
-//                .font(.system(size: 14))
+        HStack {
+            VStack {
+                Image(isSelected ? data.selectedImage : data.image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 24, height: 24)
+                
+                Spacer().frame(height: 4)
+                
+    //            Text(data.title)
+    //                .foregroundColor(isSelected ? .black : .gray)
+    //                .font(.system(size: 14))
+            }
+            .frame(maxWidth: .infinity)
         }
     }
 }
