@@ -1,0 +1,103 @@
+{
+    "Version": 1.0,
+    "Metadata":
+        {
+            "Project" : "SwiftUICatalog",
+            "Created" : "24 july 2023",
+            "Description" : "drums for death bed (coffe for your head) - Powfu, beabadoobee"
+        },
+    "Pattern":
+    [
+        {"Event":
+            {"Time": 9.0, "EventType": "HapticContinuous", "EventDuration": 4.3,
+                "EventParameters":
+                [
+                    { "ParameterID": "HapticIntensity", "ParameterValue": 0.3 },
+                    { "ParameterID": "HapticSharpness", "ParameterValue": 0.4 }
+                ]
+            }
+        },
+        {"ParameterCurve":
+            {"ParameterID": "HapticIntensityControl", "Time": 9.0,
+                "ParameterCurveControlPoints":
+                [
+                    { "Time": 9.0, "ParameterValue": 0.0 },
+                    { "Time": 11.5, "ParameterValue": 0.5 },
+                    { "Time": 13.3, "ParameterValue": 1.0 }
+                ]
+            }
+        },
+        
+
+        {"Event":
+            {"Time": 13.3, "EventType": "HapticTransient",
+                "EventParameters":
+                [
+                    { "ParameterID": "HapticIntensity", "ParameterValue": 1.0 },
+                    { "ParameterID": "HapticSharpness", "ParameterValue": 0.0 }
+                ]
+            }
+        },
+        {"Event":
+            {"Time":13.3,"EventType":"HapticContinuous","EventDuration":0.2,
+                "EventParameters":
+                [
+                    {"ParameterID":"HapticIntensity","ParameterValue":0.6}
+                ]
+            }
+        },
+        {"Event":
+            {"Time":13.7,"EventType":"HapticContinuous","EventDuration":0.1,
+                "EventParameters":
+                [
+                    {"ParameterID":"HapticIntensity","ParameterValue":0.4}
+                ]
+            }
+        },
+        {"Event":
+            {"Time":14.1,"EventType":"HapticContinuous","EventDuration":0.3,
+                "EventParameters":
+                [
+                    {"ParameterID":"HapticIntensity","ParameterValue":0.4}
+                ]
+            }
+        },
+        
+        
+        {"Event":
+            {"Time": 15.3, "EventType": "HapticTransient",
+                "EventParameters":
+                [
+                    { "ParameterID": "HapticIntensity", "ParameterValue": 1.0 },
+                    { "ParameterID": "HapticSharpness", "ParameterValue": 0.0 }
+                ]
+            }
+        },
+        {"Event":
+            {"Time":15.3,"EventType":"HapticContinuous","EventDuration":0.2,
+                "EventParameters":
+                [
+                    {"ParameterID":"HapticIntensity","ParameterValue":0.6}
+                ]
+            }
+        },
+        {"Event":
+            {"Time":15.7,"EventType":"HapticContinuous","EventDuration":0.1,
+                "EventParameters":
+                [
+                    {"ParameterID":"HapticIntensity","ParameterValue":0.4}
+                ]
+            }
+        },
+        {"Event":
+            {"Time":16.1,"EventType":"HapticContinuous","EventDuration":0.3,
+                "EventParameters":
+                [
+                    {"ParameterID":"HapticIntensity","ParameterValue":0.4}
+                ]
+            }
+        },
+        
+    ]
+}
+

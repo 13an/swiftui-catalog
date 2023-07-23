@@ -7,12 +7,7 @@ class HapticEngine: ObservableObject, Equatable {
     }
     
     private var engine: CHHapticEngine?
-
-    func hapticFeedbackSuccess() {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.success)
-    }
-
+    
     func prepareHaptics() {
         guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
 
@@ -24,50 +19,42 @@ class HapticEngine: ObservableObject, Equatable {
         }
     }
     
-    func hapticFeedbackLight() {
-        // make sure that the device supports haptics
+    func playHapticsFile(named filename: String) {
+        
+        // If the device doesn't support Core Haptics, abort.
         guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
-        var events = [CHHapticEvent]()
 
-        // create one intense, sharp tap
-        let intensity = CHHapticEventParameter(parameterID: .hapticIntensity, value: 0.6)
-        let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: 0.5)
-        let event = CHHapticEvent(eventType: .hapticTransient, parameters: [intensity, sharpness], relativeTime: 0)
-        events.append(event)
-
-        // convert those events into a pattern and play it immediately
         do {
-            let pattern = try CHHapticPattern(events: events, parameters: [])
-            let player = try engine?.makePlayer(with: pattern)
-            try player?.start(atTime: 0)
+            engine = try CHHapticEngine()
+            try engine?.start()
         } catch {
-            print("Failed to play pattern: \(error.localizedDescription).")
+            print("There was an error creating the engine: \(error.localizedDescription)")
+        }
+        
+        // Express the path to the AHAP file before attempting to load it.
+        guard let path = Bundle.main.path(forResource: filename, ofType: "ahap") else {
+            return
+        }
+        
+        do {
+            // Start the engine in case it's idle.
+            try engine?.start()
+            
+            // Tell the engine to play a pattern.
+            try engine?.playPattern(from: URL(fileURLWithPath: path))
+            
+        } catch { // Engine startup errors
+            print("An error occured playing \(filename): \(error).")
         }
     }
     
-    func hapticFeedbackLightDouble() {
-        // make sure that the device supports haptics
-        guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
-        var events = [CHHapticEvent]()
-        
-        let intensity = CHHapticEventParameter(parameterID: .hapticIntensity, value: 0.6)
-        let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: 0.4)
-
-
-        for i in stride(from: 0, through: 0.03, by: 0.04) {
-            let event = CHHapticEvent(eventType: .hapticTransient, parameters: [intensity, sharpness], relativeTime: i)
-            events.append(event)
-        }
-
-        // convert those events into a pattern and play it immediately
-        do {
-            let pattern = try CHHapticPattern(events: events, parameters: [])
-            let player = try engine?.makePlayer(with: pattern)
-            try player?.start(atTime: 0)
-        } catch {
-            print("Failed to play pattern: \(error.localizedDescription).")
-        }
-    }
+    
+    
+    // --------------------------------------------------- //
+    //
+    //
+    // --------------------------------------------------- //
+    
     
     func hapticFeedback4Beats() {
         guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
@@ -78,34 +65,6 @@ class HapticEngine: ObservableObject, Equatable {
             let intensity = CHHapticEventParameter(parameterID: .hapticIntensity, value: 1)
             let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: 1)
             let event = CHHapticEvent(eventType: .hapticTransient, parameters: [intensity, sharpness], relativeTime: i)
-            events.append(event)
-        }
-        
-        do {
-            let pattern = try CHHapticPattern(events: events, parameters: [])
-            let player = try engine?.makePlayer(with: pattern)
-            try player?.start(atTime: 0)
-        } catch {
-            print("Failed to play pattern \(error.localizedDescription)")
-        }
-    }
-
-    func complexSuccess() {
-        guard CHHapticEngine.capabilitiesForHardware().supportsHaptics else { return }
-
-        var events = [CHHapticEvent]()
-        
-        for i in stride(from: 0, through: 1, by: 0.1) {
-            let intensity = CHHapticEventParameter(parameterID: .hapticIntensity, value: Float(i))
-            let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: Float(i))
-            let event = CHHapticEvent(eventType: .hapticTransient, parameters: [intensity, sharpness], relativeTime: i)
-            events.append(event)
-        }
-        
-        for i in stride(from: 0, through: 1, by: 0.1) {
-            let intensity = CHHapticEventParameter(parameterID: .hapticIntensity, value: Float(1 - i))
-            let sharpness = CHHapticEventParameter(parameterID: .hapticSharpness, value: Float(1 - i))
-            let event = CHHapticEvent(eventType: .hapticTransient, parameters: [intensity, sharpness], relativeTime: 1 + i)
             events.append(event)
         }
         

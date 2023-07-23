@@ -39,6 +39,9 @@
 		3EB326B42A611C8B00CE2442 /* GeneralCatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB326B32A611C8B00CE2442 /* GeneralCatalogView.swift */; };
 		3EE0DFA42A6D1A6F002B322F /* TabBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE0DFA32A6D1A6F002B322F /* TabBottomView.swift */; };
 		3EE0DFF02A6D3567002B322F /* SafeAreaExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE0DFEF2A6D3567002B322F /* SafeAreaExtension.swift */; };
+		3EF9F5112A6D71C800392BF4 /* boing.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 3EF9F5102A6D71C800392BF4 /* boing.ahap */; };
+		3EF9F5142A6D751E00392BF4 /* light.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 3EF9F5132A6D751E00392BF4 /* light.ahap */; };
+		3EF9F5162A6D78B700392BF4 /* death-bed.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 3EF9F5152A6D78B700392BF4 /* death-bed.ahap */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +97,9 @@
 		3EB326B32A611C8B00CE2442 /* GeneralCatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCatalogView.swift; sourceTree = "<group>"; };
 		3EE0DFA32A6D1A6F002B322F /* TabBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBottomView.swift; sourceTree = "<group>"; };
 		3EE0DFEF2A6D3567002B322F /* SafeAreaExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaExtension.swift; sourceTree = "<group>"; };
+		3EF9F5102A6D71C800392BF4 /* boing.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = boing.ahap; sourceTree = "<group>"; };
+		3EF9F5132A6D751E00392BF4 /* light.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = light.ahap; sourceTree = "<group>"; };
+		3EF9F5152A6D78B700392BF4 /* death-bed.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "death-bed.ahap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,9 @@
 				3E709EDE2A5D4EDF004A9BC4 /* HapticsView.swift */,
 				3E75FFE22A5FCDC60023E4D7 /* HapticEngine.swift */,
 				3E279ADF2A601FDF0050E32E /* HapticsView_Music.swift */,
+				3EF9F5102A6D71C800392BF4 /* boing.ahap */,
+				3EF9F5132A6D751E00392BF4 /* light.ahap */,
+				3EF9F5152A6D78B700392BF4 /* death-bed.ahap */,
 			);
 			path = Haptics;
 			sourceTree = "<group>";
@@ -370,6 +379,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EF9F5142A6D751E00392BF4 /* light.ahap in Resources */,
+				3EF9F5112A6D71C800392BF4 /* boing.ahap in Resources */,
+				3EF9F5162A6D78B700392BF4 /* death-bed.ahap in Resources */,
 				3E7E4F0F2A59451D00FB3DF7 /* Preview Assets.xcassets in Resources */,
 				3E279ADE2A601EFC0050E32E /* song.mp3 in Resources */,
 				3E709EDD2A5D4593004A9BC4 /* ikigai.mov in Resources */,

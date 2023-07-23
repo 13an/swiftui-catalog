@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SettingView: View {
     @Environment(\.dismiss) var dismiss
+    @StateObject private var hapticEngine = HapticEngine()
     
     var body: some View {
         VStack {
@@ -34,6 +35,7 @@ struct SettingView: View {
             }
             Button("Close") {
                 dismiss()
+                hapticEngine.playHapticsFile(named: "light")
             }
             .font(.title)
             .buttonStyle(.bordered)

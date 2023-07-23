@@ -34,8 +34,7 @@ struct TabBottomView: View {
                     }
                     .onLongPressGesture(minimumDuration: 0.1, maximumDistance: .infinity, pressing: { pressing in
                             if pressing {
-                                hapticEngine.prepareHaptics()
-                                hapticEngine.hapticFeedbackLight()
+                                hapticEngine.playHapticsFile(named: "light")
                             }
                         }, perform: {})
                     Spacer()

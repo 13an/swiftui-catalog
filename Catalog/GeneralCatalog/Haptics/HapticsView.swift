@@ -20,30 +20,25 @@ struct HapticsView: View {
             List {
                 Section("Light") {
                     Button("onTapGesture Light Haptic Feedback") {
-                        
+                        hapticEngine.playHapticsFile(named: "light")
                     }
-                    .onAppear(perform: hapticEngine.prepareHaptics)
-                    .onTapGesture(perform: hapticEngine.hapticFeedbackLight)
                 }
                 
                 Section("Light") {
                     Button("onLongPressGesture Light Haptic Feedback") {
                         
                     }
-                    .onAppear(perform: hapticEngine.prepareHaptics)
                     .onLongPressGesture(minimumDuration: 0.8, maximumDistance: .infinity, pressing: { pressing in
                             if pressing {
-                                hapticEngine.hapticFeedbackLight()
+                                hapticEngine.playHapticsFile(named: "light")
                             }
                         }, perform: {})
                 }
                 
                 Section("Light Double") {
                     Button("Light Double Haptic Feedback") {
-                        
+                        hapticEngine.playHapticsFile(named: "light")
                     }
-                    .onAppear(perform: hapticEngine.prepareHaptics)
-                    .onTapGesture(perform: hapticEngine.hapticFeedbackLightDouble)
                 }
                 
                 Section("Music with Haptics") {

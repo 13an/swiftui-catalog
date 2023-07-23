@@ -27,8 +27,7 @@ struct GeneralCatalogView: View {
                 .background(.white)
                 .cornerRadius(8)
                 .onChange(of: selectedSegment) { segment in
-                    hapticEngine.prepareHaptics()
-                    hapticEngine.hapticFeedbackLightDouble()
+                    hapticEngine.playHapticsFile(named: "light")
                 }
                 .environmentObject(hapticEngine)
             }

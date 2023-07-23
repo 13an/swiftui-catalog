@@ -15,7 +15,8 @@ struct HapticsView_Music: View {
     var body: some View {
         Button("Music with Haptics") {
             audioPlayer?.play()
-            hapticEngine.hapticFeedback4Beats()
+            hapticEngine.playHapticsFile(named: "death-bed")
+//            hapticEngine.hapticFeedback4Beats()
         }
         .onAppear {
             if let songURL = Bundle.main.url(forResource: "song", withExtension: "mp3") {

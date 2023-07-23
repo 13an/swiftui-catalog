@@ -14,8 +14,7 @@ struct TextCatalog_Length: View {
         VStack(alignment: .leading, spacing: 24) {
             Text("Hello, world!")
                 .onTapGesture {
-                    hapticEngine.prepareHaptics()
-                    hapticEngine.hapticFeedbackLight()
+                    hapticEngine.playHapticsFile(named: "light")
                 }
             
             Text("sooooooooooooooooooooooooooooooooooooooooooooooooooooooooo long text")

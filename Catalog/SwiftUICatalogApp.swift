@@ -8,14 +8,12 @@
 import SwiftUI
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-    var hapticEngine: HapticEngine?
+    
+    var window: UIWindow?
+    var supportsHaptics: Bool = false
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         return true
-    }
-    
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        hapticEngine?.prepareHaptics()
     }
 }
 
@@ -28,9 +26,6 @@ struct MyNameApp: App {
         WindowGroup {
             MainTabView()
                 .environmentObject(hapticEngine)
-                .onAppear {
-                    appDelegate.hapticEngine = hapticEngine
-                }
         }
     }
 }
