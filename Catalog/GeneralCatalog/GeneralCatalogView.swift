@@ -26,10 +26,8 @@ struct GeneralCatalogView: View {
                 .pickerStyle(.segmented)
                 .background(.white)
                 .cornerRadius(8)
-                .onAppear {
-                    hapticEngine.prepareHaptics()
-                }
                 .onChange(of: selectedSegment) { segment in
+                    hapticEngine.prepareHaptics()
                     hapticEngine.hapticFeedbackLightDouble()
                 }
                 .environmentObject(hapticEngine)
